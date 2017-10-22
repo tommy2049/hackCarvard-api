@@ -53,6 +53,10 @@ function generateGoogleQuery(make, model){
   return 'https://www.google.com/search?q=' + make + '+' + model + '+' + 'price'
 }
 
+app.post('/', function(req, res){
+  res.send("hello world!")
+})
+
 app.post('/api/getRating', function(req, res){
   var make = req.body.make;
   var model = req.body.model;
