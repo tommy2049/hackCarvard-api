@@ -65,8 +65,6 @@ app.post('/api/getRating', function(req, res){
   }
 })
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
